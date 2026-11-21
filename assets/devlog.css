@@ -1,0 +1,126 @@
+/* 开发日志 · 蓝帖风格（只借鉴版式：深色底、蓝色作者与正文、头像、时间戳、引用块；不使用暴雪任何素材） */
+:root{
+  --dl-bg:#13151a; --dl-bg-2:#1a1d24; --dl-card:#1e222b; --dl-line:#2c313c;
+  --dl-blue:#4fc0ff; --dl-blue-soft:#9ad8ff; --dl-text:#d9dee7; --dl-muted:#8b93a3;
+  --dl-gold:#e8b65a; --dl-quote:#171a21;
+}
+body.devlog{background:var(--dl-bg);background-image:
+  radial-gradient(ellipse at 15% 0%, rgba(79,192,255,.08), transparent 55%),
+  linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size:auto,48px 48px,48px 48px;color:var(--dl-text);line-height:1.75}
+body.devlog a{color:var(--dl-gold)}
+body.devlog a:hover{color:#ffd58a}
+
+/* 顶栏沿用官网羊皮纸色，保持和首页一致 */
+.dl-top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:10px clamp(14px,4vw,40px);
+  background:rgba(243,233,210,.96);border-bottom:2px solid var(--sepia)}
+.dl-top .brand{font-size:16px}
+.dl-top .back{margin-left:auto;font-size:14px;color:var(--sepia);text-decoration:none;letter-spacing:.04em}
+body.devlog .dl-top .back{color:var(--sepia)}
+.view-toggle{display:inline-flex;border:1px solid var(--sepia);border-radius:2px;overflow:hidden}
+.view-toggle button{font:inherit;font-size:13px;padding:4px 12px;border:0;background:transparent;color:var(--sepia);cursor:pointer}
+.view-toggle button+button{border-left:1px solid var(--sepia)}
+.view-toggle button[aria-pressed="true"]{background:var(--sepia);color:var(--paper)}
+
+.dl-wrap{max-width:1180px;margin:0 auto;padding:28px clamp(12px,4vw,40px) 64px}
+.crumbs{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:var(--dl-muted);margin:0 0 14px;text-transform:uppercase}
+.crumbs a{color:var(--dl-muted)!important;text-decoration:none}
+.thread-title{margin:0 0 6px;font-size:clamp(22px,3.4vw,34px);line-height:1.3;color:#fff;letter-spacing:.02em}
+.thread-title .zh{display:block;font-size:.72em;color:var(--dl-muted);font-weight:600;margin-top:4px}
+.draft-chip{display:inline-block;font-family:var(--mono);font-size:12px;padding:2px 8px;border:1px dashed var(--dl-gold);color:var(--dl-gold);margin:10px 0 18px}
+
+/* 帖子卡片：左作者栏 + 右正文 */
+.post{display:grid;grid-template-columns:168px 1fr;background:var(--dl-card);border:1px solid var(--dl-line);border-top:3px solid var(--dl-blue);border-radius:4px;overflow:hidden;box-shadow:0 6px 24px rgba(0,0,0,.35)}
+.author{padding:22px 16px;background:var(--dl-bg-2);border-right:1px solid var(--dl-line);text-align:center}
+.avatar{width:84px;height:84px;margin:0 auto 10px;border-radius:50%;background:#0d1a24;border:2px solid var(--dl-blue);display:grid;place-items:center;box-shadow:0 0 0 4px rgba(79,192,255,.12)}
+.avatar svg{width:56px;height:56px;color:var(--dl-blue)}
+.author-name{color:var(--dl-blue);font-weight:700;font-size:16px;line-height:1.35}
+.author-title{color:var(--dl-blue-soft);font-size:12px;letter-spacing:.06em;margin-top:4px;opacity:.85}
+.author-badge{display:inline-block;margin-top:10px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;padding:2px 6px;border:1px solid var(--dl-blue);color:var(--dl-blue);border-radius:2px}
+.post-main{min-width:0}
+.post-meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;padding:12px 22px;border-bottom:1px solid var(--dl-line);font-family:var(--mono);font-size:12px;color:var(--dl-muted)}
+.post-meta time{color:var(--dl-text)}
+.post-body{padding:8px 22px 26px;color:var(--dl-blue)}
+.post-body h2{font-size:19px;color:#fff;margin:28px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--dl-line);letter-spacing:.02em}
+.post-body h2 .zh{color:var(--dl-muted);font-weight:600}
+.post-body p,.post-body li{margin:0}
+.post-body hr{border:0;border-top:1px solid var(--dl-line);margin:22px 0}
+.post-body code{font-family:var(--mono);font-size:.9em;color:var(--dl-blue-soft);background:#11141a;padding:1px 5px;border-radius:3px}
+.post-body strong{color:#bfe6ff}
+
+/* 中英对照：一组 = 英文 + 中文 */
+.pair{display:grid;grid-template-columns:1fr;gap:4px;margin:14px 0}
+.pair .en{font-size:16px}
+.pair .zh{font-size:15.5px;color:var(--dl-blue-soft);opacity:.92}
+html[data-view="both"] .pair .zh{border-left:2px solid rgba(79,192,255,.28);padding-left:12px}
+html[data-view="en"] .zh{display:none!important}
+html[data-view="zh"] .en{display:none!important}
+html[data-view="zh"] .pair .zh{font-size:16px;opacity:1;color:var(--dl-blue)}
+ul.pairs{list-style:none;padding:0;margin:6px 0}
+ul.pairs>li{position:relative;padding-left:18px}
+ul.pairs>li::before{content:"";position:absolute;left:2px;top:.75em;width:7px;height:7px;transform:rotate(45deg);background:var(--dl-blue)}
+@media (min-width:900px){
+  html[data-view="both"] .pair{grid-template-columns:1fr 1fr;gap:28px}
+  html[data-view="both"] .pair .zh{border-left:1px solid var(--dl-line);padding-left:20px}
+  html[data-view="both"] .post-body h2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+}
+html:not([data-view="both"]) .post-body h2 .zh{color:#fff}
+
+/* 引用块（蓝帖里常见的引用框，这里用来放更新说明） */
+.quote{margin:22px 0 6px;background:var(--dl-quote);border:1px solid var(--dl-line);border-left:3px solid var(--dl-gold);border-radius:3px}
+.quote-head{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--dl-gold);padding:8px 14px;border-bottom:1px solid var(--dl-line)}
+.quote .pair{margin:10px 14px}
+.post-foot{padding:12px 22px;border-top:1px solid var(--dl-line);font-size:13px;color:var(--dl-muted)}
+
+/* 列表页 */
+.list-head{margin:6px 0 22px}
+.list-head p{color:var(--dl-muted);margin:6px 0 0}
+.thread{display:grid;grid-template-columns:56px 1fr;gap:16px;align-items:start;background:var(--dl-card);border:1px solid var(--dl-line);border-left:3px solid var(--dl-blue);border-radius:4px;padding:18px;margin-bottom:14px;text-decoration:none!important}
+.thread:hover{background:#232836}
+.thread .avatar{width:52px;height:52px;margin:0}
+.thread .avatar svg{width:34px;height:34px}
+.thread h2{margin:0;font-size:19px;color:#fff;line-height:1.35}
+.thread h2 .zh{display:block;font-size:15px;color:var(--dl-muted);margin-top:2px}
+.thread .meta{font-family:var(--mono);font-size:12px;color:var(--dl-muted);margin:6px 0}
+.thread .meta b{color:var(--dl-blue);font-weight:700}
+.thread .pair{margin:6px 0 0}
+
+.dl-footer{border-top:1px solid var(--dl-line);color:var(--dl-muted);text-align:center;font-size:13px;padding:26px 16px 36px}
+.dl-footer a{color:var(--dl-muted)!important}
+
+@media (max-width:640px){
+  .post{grid-template-columns:1fr}
+  .author{display:flex;align-items:center;gap:12px;text-align:left;padding:12px 14px;border-right:0;border-bottom:1px solid var(--dl-line)}
+  .avatar{width:48px;height:48px;margin:0;flex:none}
+  .avatar svg{width:32px;height:32px}
+  .author-badge{margin-top:4px}
+  .post-meta,.post-body,.post-foot{padding-left:14px;padding-right:14px}
+  .pair .en,.pair .zh{font-size:16px}
+  .dl-top .brand span{display:none}
+  .thread{grid-template-columns:1fr}
+  .thread .avatar{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* 对照模式下，非段落的短标签（作者名、按钮、时间说明）用斜杠连起中英文 */
+html[data-view="both"] span.en + span.zh::before{content:" / ";color:var(--dl-muted)}
+html[data-view="both"] .dl-top span.en + span.zh::before{color:var(--sepia)}
+html[data-view="both"] .author-name span.zh{display:block}
+html[data-view="both"] .author-name span.en + span.zh::before{content:none}
+@media (min-width:900px){html[data-view="both"] .post-body h2 span.en + span.zh::before{content:none}}
+body.devlog .dl-top .brand{color:var(--ink)}
+@media (max-width:640px){
+  .dl-top{flex-wrap:nowrap}
+  .dl-top .back{display:none}
+  .view-toggle{margin-left:auto}
+  .pair{margin:18px 0}
+  html[data-view="both"] .pair .zh{margin-top:6px}
+}
+/* 英文用西文字体在前，避免中文字体把 ’ “ ” 排成全角 */
+body.devlog{--latin:Georgia,"Times New Roman","Noto Serif","DejaVu Serif",serif}
+body.devlog .en,body.devlog [lang="en"],body.devlog .thread-title,body.devlog .thread h2,body.devlog .author-name{font-family:var(--latin)}
+body.devlog .zh,body.devlog [lang="zh-CN"]{font-family:var(--serif)}
+body.devlog a.thread{color:var(--dl-blue)}
+body.devlog a.thread .pair .zh{color:var(--dl-blue-soft)}
+.list-head .pair .zh{color:var(--dl-muted)}
