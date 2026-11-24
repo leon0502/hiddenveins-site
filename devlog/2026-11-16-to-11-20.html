@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-view="both">
+<html lang="en" data-view="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- 草稿 DRAFT：未上线，请勿发布 / not published -->
-<meta name="robots" content="noindex">
 <title>Hidden Veins Devlog: November 16–20, 2026 · 隐脉勘舆开发日志</title>
+<link rel="canonical" href="https://hiddenveins.loveying.ca/devlog/2026-11-16-to-11-20.html">
 <meta name="description" content="Hidden Veins devlog, Nov 16–20, 2026: a Chapter 1 blueprint and the first playable station setup. 《隐脉勘舆》开发日志 2026 年 11 月 16–20 日。">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23f3e9d2' stroke='%237a3e1d' stroke-width='2'/%3E%3Cpath d='M16 4v24M4 16h24' stroke='%237a3e1d' stroke-width='1.5'/%3E%3Cpath d='M16 7l3 9-3 9-3-9z' fill='%23a3472a'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../assets/style.css">
@@ -15,14 +14,13 @@
 <header class="dl-top">
   <a class="brand" href="../" aria-label="Hidden Veins home / 隐脉勘舆首页"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M16 3v26M3 16h26" stroke="currentColor" stroke-width="0.8"/><path d="M16 6l3 10-3 10-3-10z" fill="#a3472a"/></svg><span>Hidden Veins · 隐脉勘舆</span></a>
   <div class="view-toggle" role="group" aria-label="Language view / 语言视图">
-    <button type="button" data-view="en" aria-pressed="false">EN</button><button type="button" data-view="zh" aria-pressed="false">中文</button><button type="button" data-view="both" aria-pressed="true">对照</button>
+    <button type="button" data-view="en" aria-pressed="true">EN</button><button type="button" data-view="zh" aria-pressed="false">中文</button><button type="button" data-view="both" aria-pressed="false">对照</button>
   </div>
   <a class="back" href="../">← <span class="en">Home</span><span class="zh">返回首页</span></a>
 </header>
 <main class="dl-wrap">
   <p class="crumbs"><a href="../">Hidden Veins</a> / <a href="./">Devlog</a> / No.001</p>
   <h1 class="thread-title">Hidden Veins Devlog: November 16–20, 2026<span class="zh" lang="zh-CN">《隐脉勘舆》开发日志：2026 年 11 月 16 日–20 日</span></h1>
-  <span class="draft-chip">DRAFT · <span class="en">not published</span><span class="zh">草稿，未发布</span></span>
   <article class="post">
     <aside class="author">
       <div class="avatar"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M16 3v26M3 16h26" stroke="currentColor" stroke-width="0.8"/><path d="M16 6l3 10-3 10-3-10z" fill="currentColor"/></svg></div>
@@ -38,9 +36,9 @@
 <div class="pair"><p class="en" lang="en">Over these few days, <em>Hidden Veins</em> got a Chapter 1 blueprint we can build from, and delivered its first piece of surveying you can actually play. Surveyor Lin Che heads into a valley that a reservoir is about to flood, and uses real surveying methods to re-survey an incomplete ancient map.</p><p class="zh" lang="zh-CN">这几天，《隐脉勘舆》（Hidden Veins）有了可以按图施工的第一章蓝图，也交出了第一段真正能玩的测量操作。测量员林澈将走进即将被水库淹没的山谷，用真实的测绘方法，把一张残缺的古舆图重新测出来。</p></div>
 <h2><span class="en" lang="en">November 16: A fresh start</span><span class="zh" lang="zh-CN">11 月 16 日：项目重新出发</span></h2>
 <div class="pair"><p class="en" lang="en">Work was brought together into the current main project, which keeps the name 《隐脉勘舆》 / <em>Hidden Veins</em>. The same day we built playtest v0.4: you start with no equipment and first have to fetch the tripod and instrument from camp, then set up, record, drive and save the way real fieldwork is done. The valley is about 300 × 300 metres, and this build is still a vertical slice of roughly ten-odd minutes, meant to nail down how fieldwork feels.</p><p class="zh" lang="zh-CN">工作合并到现在的主项目，游戏名沿用《隐脉勘舆》/ Hidden Veins。同一天打出了试玩版 v0.4：开局身上没有器材，要先去营地取三脚架和仪器，再按外业习惯架站、记录、开车和存档。山谷约 300 × 300 米，这一版仍是大约十几分钟的垂直切片，用来立住外业手感。</p></div>
-<div class="pair"><p class="en" lang="en">The story direction is set too. The main storyline is “The Survey Scroll”: while doing control surveying before the reservoir fills, Lin Che finds an incomplete map left behind long ago, and starts re-surveying it, one clue at a time. His mentor’s storyline stays as an optional side story. The puzzles use old Chinese units of length, which you convert into metres as you go. The interface is English-first with Chinese second, and both languages follow the same main story.</p><p class="zh" lang="zh-CN">故事方向也定了。主线是「舆图残卷」：蓄水前的控制测量里，林澈发现一张古人留下的残缺舆图，于是顺着图上的线索一点点重测。师父线作为可选支线保留。谜题里用的是古代的长度单位，要边算边换成米。界面以英文为主、中文为辅，中英文走同一条主线。</p></div>
+<div class="pair"><p class="en" lang="en">The story direction is set too. The main storyline is “The Survey Scroll”: while doing control surveying before the reservoir fills, Lin Che finds an incomplete map left behind long ago, and starts re-surveying it, one clue at a time. The puzzles use old Chinese units of length, which you convert into metres as you go. The interface is English-first with Chinese second, and both languages follow the same main story.</p><p class="zh" lang="zh-CN">故事方向也定了。主线是「舆图残卷」：蓄水前的控制测量里，林澈发现一张古人留下的残缺舆图，于是顺着图上的线索一点点重测。谜题里用的是古代的长度单位，要边算边换成米。界面以英文为主、中文为辅，中英文走同一条主线。</p></div>
 <h2><span class="en" lang="en">November 17: Pinning down Chapter 1’s skeleton</span><span class="zh" lang="zh-CN">11 月 17 日：把第一章的骨架钉住</span></h2>
-<div class="pair"><p class="en" lang="en">That day we settled 46 open questions from sections 18.10–18.16 of the design document, and then gave the mentor a name: Gao Yuan. Chapter 1 is set in Heng Ridge, a fictional karst mountain region in the southwest, which uses its own Heng Ridge Local Grid. Level layouts were written into the document. Years ago, Gao Yuan surveyed these mountains, but part of the way was left unfinished — that part, Lin Che has to survey himself.</p><p class="zh" lang="zh-CN">这一天拍板了设计文档第 18.10–18.16 节共 46 个问题，随后师父定名为高远（Gao Yuan）。第一章的舞台是虚构的西南喀斯特山区衡岭（Heng Ridge），采用衡岭独立坐标系。关卡落位写进了文档。高远多年前在这片山里做过普查，却有一段路没有走完——那一段，要由林澈自己测完。</p></div>
+<div class="pair"><p class="en" lang="en">That day we settled 46 open questions from sections 18.10–18.16 of the design document. Chapter 1 is set in Heng Ridge, a fictional karst mountain region in the southwest, which uses its own Heng Ridge Local Grid. Level layouts were written into the document.</p><p class="zh" lang="zh-CN">这一天拍板了设计文档第 18.10–18.16 节共 46 个问题。第一章的舞台是虚构的西南喀斯特山区衡岭（Heng Ridge），采用衡岭独立坐标系。关卡落位写进了文档。</p></div>
 <h2><span class="en" lang="en">November 18–19: Chapter 1 puzzle sites locked in</span><span class="zh" lang="zh-CN">11 月 18–19 日：第一章谜题遗迹定稿</span></h2>
 <div class="pair"><p class="en" lang="en">Over the next two days, the puzzle sites in the second half of Chapter 1 were settled one by one, and each is built around a real surveying method. To keep things spoiler-free, here we only say which kind of method each one uses:</p><p class="zh" lang="zh-CN">接下来两天，第一章后半的谜题遗迹一处一处定下来，每处都对应一种真实的测量方法。为了不剧透，这里只说每处用的是哪类方法：</p></div>
 <ul class="pairs"><li class="pair"><p class="en" lang="en"><strong>The North Ridge Mark</strong> — long-distance sighting. Get up high, look out along a single line, and search the ridge for what is waiting there.</p><p class="zh" lang="zh-CN"><strong>北脊刻字</strong>：远距离照准。登上高处，沿一条视线望出去，在山脊上寻找等着你的东西。</p></li><li class="pair"><p class="en" lang="en"><strong>The Nested Halls</strong> — carrying a bearing inside and running a closed traverse. In a place built to get you lost, the only thing you can trust is the angles you measure yourself, station by station.</p><p class="zh" lang="zh-CN"><strong>回字廊</strong>：方位传递与闭合导线。在一个专门让人迷路的地方，唯一能信的，是你自己一站一站测出来的角度。</p></li><li class="pair"><p class="en" lang="en"><strong>The Well Archive</strong> — carrying heights and directions down a shaft, then setting out below. You take what you know on the surface down into a place you can’t see.</p><p class="zh" lang="zh-CN"><strong>天井藏经洞</strong>：竖井传递高程和方向，再在井下放样。把地面上已知的东西，带进看不见的深处。</p></li><li class="pair"><p class="en" lang="en"><strong>The Thousand Rooms</strong> — resection. In rooms that all look alike, work out where you are standing from angles alone, and learn to judge whether your answer can be trusted.</p><p class="zh" lang="zh-CN"><strong>千室厅</strong>：后方交会。在长得一模一样的房间里，只凭测角弄清自己站在哪里，还要学会判断这个结果靠不靠得住。</p></li><li class="pair"><p class="en" lang="en"><strong>The Hidden Channel</strong> — levelling and chainage. Down in the dark, a level and a measured distance are what keep you on course.</p><p class="zh" lang="zh-CN"><strong>暗渠</strong>：水准测量与量里程。在黑暗里，靠水准仪和量出来的距离认路。</p></li><li class="pair"><p class="en" lang="en"><strong>The Confluence Hall</strong> — a breakthrough survey. Measure above ground and below, and make the two halves meet.</p><p class="zh" lang="zh-CN"><strong>汇水殿</strong>：贯通测量。地上、地下各测一段，让两边的成果严丝合缝地对上。</p></li><li class="pair"><p class="en" lang="en"><strong>And beyond</strong> — the end of Chapter 1 leads straight into Chapter 2.</p><p class="zh" lang="zh-CN"><strong>再往后</strong>：第一章的终点，直接通向第二章。</p></li></ul>
@@ -62,7 +60,6 @@
 </main>
 <footer class="dl-footer">
   <p>© 2026 Loveying Ent. · <a href="../">Hidden Veins · 隐脉勘舆</a></p>
-  <p><span class="en">Draft — not published.</span><span class="zh">草稿，尚未发布。</span></p>
 </footer>
 <script src="../assets/devlog.js"></script>
 </body>

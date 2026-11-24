@@ -1,4 +1,4 @@
-/* 隐脉勘舆 官网草稿 · 测绘 / 地形图风格 · 无外部资源 */
+/* Hidden Veins site · 测绘 / 地形图风格 · 无外部资源 */
 :root{
   --paper:#f3e9d2; --paper-2:#eadcbc; --paper-3:#e2d1aa;
   --ink:#2f2416; --ink-soft:#5b4a33; --sepia:#7a3e1d; --vermilion:#a3472a;
@@ -55,6 +55,8 @@ html[data-lang="en"] .i-zh{display:none!important}
 .btn svg{width:22px;height:22px}
 .btn-steam{background:var(--sepia);color:var(--paper);border:1px solid var(--sepia);box-shadow:4px 4px 0 var(--ink)}
 .btn-steam:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.btn-soon{cursor:default;opacity:.85;box-shadow:none}
+.btn-soon:hover{transform:none;box-shadow:none}
 .btn-ghost{background:rgba(243,233,210,.7);color:var(--sepia);border:1px solid var(--sepia)}
 .btn-ghost:hover{background:var(--paper-2)}
 .status-note{margin-top:26px;font-family:var(--mono);font-size:13px;color:var(--ink-soft);letter-spacing:.04em}

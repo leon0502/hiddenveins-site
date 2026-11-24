@@ -10,7 +10,7 @@
   var saved = null;
   try { saved = localStorage.getItem('hv-lang'); } catch (e) {}
   var q = new URLSearchParams(location.search).get('lang');
-  setLang(q === 'en' || q === 'zh' ? q : (saved || 'zh'));
+  setLang(q === 'en' || q === 'zh' ? q : (saved || 'en'));
   btn.addEventListener('click', function () {
     setLang(root.getAttribute('data-lang') === 'zh' ? 'en' : 'zh');
   });

@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-lang="zh">
+<html lang="en" data-lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- 草稿 DRAFT：未上线，请勿发布 / not published -->
-<title>隐脉勘舆 · Hidden Veins</title>
-<meta name="description" content="《隐脉勘舆》：一款以测绘为核心的开放世界 RPG。踏勘、测量、绘图，每一张地图都由你亲手测出。An open-world RPG about the real craft of surveying.">
-<!-- TODO: 正式域名确定后补 canonical / og:url / og:image（og:image 需等真实游戏画面或定稿主视觉） -->
-<meta property="og:title" content="隐脉勘舆 · Hidden Veins">
-<meta property="og:description" content="把荒野亲手测成地图。Survey the wild, one measurement at a time.">
+<title>Hidden Veins · 隐脉勘舆</title>
+<meta name="description" content="Hidden Veins: a realistic surveying open-world game. Scout, measure, draw — every map is one you surveyed yourself. 《隐脉勘舆》：以真实测绘为核心的开放世界游戏。踏勘、测量、绘图，每一张地图都由你亲手测出。">
+<link rel="canonical" href="https://hiddenveins.loveying.ca/">
+<meta property="og:title" content="Hidden Veins · 隐脉勘舆">
+<meta property="og:description" content="Survey the wild, one measurement at a time. 把荒野亲手测成地图。">
+<meta property="og:url" content="https://hiddenveins.loveying.ca/">
+<meta property="og:type" content="website">
+<!-- TODO: og:image 需等真实游戏画面或定稿主视觉 -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23f3e9d2' stroke='%237a3e1d' stroke-width='2'/%3E%3Cpath d='M16 4v24M4 16h24' stroke='%237a3e1d' stroke-width='1.5'/%3E%3Cpath d='M16 7l3 9-3 9-3-9z' fill='%23a3472a'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
 <header class="topbar">
-  <a class="brand" href="#top" aria-label="隐脉勘舆 首页">
+  <a class="brand" href="#top" aria-label="Hidden Veins home / 隐脉勘舆首页">
     <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M16 3v26M3 16h26" stroke="currentColor" stroke-width="0.8"/><path d="M16 6l3 10-3 10-3-10z" fill="#a3472a"/></svg>
     <span class="i-zh">隐脉勘舆</span><span class="i-en">Hidden Veins</span>
   </a>
@@ -25,7 +27,7 @@
     <a href="devlog/"><span class="i-zh">开发日志</span><span class="i-en">Devlog</span></a>
     <a href="#subscribe"><span class="i-zh">订阅</span><span class="i-en">Newsletter</span></a>
   </nav>
-  <button class="lang-toggle" type="button" id="langToggle" aria-label="切换语言 / Switch language">EN</button>
+  <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language / 切换语言">中文</button>
 </header>
 
 <main id="top">
@@ -49,7 +51,7 @@
     </svg>
 
     <div class="hero-inner">
-      <p class="eyebrow"><span class="i-zh">以测绘为核心的开放世界 RPG</span><span class="i-en">An open-world RPG about the craft of surveying</span></p>
+      <p class="eyebrow"><span class="i-zh">真实模拟测绘开放世界游戏</span><span class="i-en">A realistic surveying open-world game</span></p>
       <h1 class="title">
         <span class="title-zh">隐脉勘舆</span>
         <span class="title-en">Hidden Veins</span>
@@ -63,16 +65,16 @@
         <span class="i-en">Set up, level, sight, record — every contour line on your map is one you measured yourself.</span>
       </p>
       <div class="cta-row">
-        <!-- TODO: Steam App 链接 —— 商店页公开后替换为 https://store.steampowered.com/app/<APPID>/ ；商店页公开前请保持占位或隐藏此按钮 -->
-        <a class="btn btn-steam" href="#" data-todo="steam-link">
+        <!-- 尚无公开 Steam 商店页，不放商店链接；页面公开后再改为 app 链接 -->
+        <span class="btn btn-steam btn-soon" aria-disabled="true">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-9.96 9.1l5.36 2.22a2.8 2.8 0 0 1 1.6-.5l2.4-3.47v-.05a3.8 3.8 0 1 1 3.8 3.8h-.09l-3.42 2.44a2.84 2.84 0 0 1-5.62.6L2.3 14.6A10 10 0 1 0 12 2Zm-4.6 15.2-1.23-.51a2.13 2.13 0 1 0 1.16-2.9l1.27.53a1.57 1.57 0 1 1-1.2 2.88Zm9.85-7.4a2.53 2.53 0 1 0-2.53 2.53 2.53 2.53 0 0 0 2.53-2.53Zm-4.43 0a1.9 1.9 0 1 1 1.9 1.9 1.9 1.9 0 0 1-1.9-1.9Z"/></svg>
-          <span class="i-zh">加入 Steam 愿望单</span><span class="i-en">Wishlist on Steam</span>
-        </a>
+          <span class="i-zh">Steam 愿望单即将开放</span><span class="i-en">Wishlist on Steam coming soon</span>
+        </span>
         <a class="btn btn-ghost" href="#subscribe"><span class="i-zh">订阅开发动态</span><span class="i-en">Get dev updates</span></a>
       </div>
       <p class="status-note">
-        <span class="i-zh">开发中 · 计划参加 2027 年 10 月 Steam 新品节（免费 Demo）· PC</span>
-        <span class="i-en">In development · Free demo planned for Steam Next Fest, Oct 2027 · PC</span>
+        <span class="i-zh">开发中 · Steam 愿望单即将开放 · PC</span>
+        <span class="i-en">In development · Wishlist on Steam coming soon · PC</span>
       </p>
     </div>
     <div class="scale-bar" aria-hidden="true"><span></span><span></span><span></span><span></span><em>0 · 100 · 200 m</em></div>
@@ -85,13 +87,15 @@
         <h2 class="sec-title"><span class="i-zh">关于游戏</span><span class="i-en">About the Game</span><small>01 · ABOUT</small></h2>
       </div>
       <div class="prose">
-        <!-- 文案来源：store-page-kit.md 3.2 简短描述草稿 B；主角身份 / 时代感 / 绘图风格未定，故未写具体设定与剧情 -->
-        <p class="i-zh">《隐脉勘舆》是一款以真实测绘为核心的开放世界 RPG。踏勘、测量、绘图——没有一键扫图，每一张地图都由你亲手测出，并带你走向这片大陆的更深处。</p>
-        <p class="i-en"><em>Hidden Veins</em> is an open-world RPG about the real craft of surveying. Scout, measure, draw — there is no one-click map reveal. Every map is one you surveyed yourself, and each one leads you deeper into the land.</p>
+        <!-- 文案依据（只写已定且不剧透的事实）：
+             类型：GDD v2.3 目录标题「真实模拟测绘开放世界游戏」；GDD_v2.3_EN.md「Realistic Surveying Open-World Game」。
+             游戏名与主角：production/decisions.md N1；GDD 0.0 设定摘要（林澈，蓄水前控制测量）。
+             发行窗口 / 新品节：现行 production/tasks.md、decisions.md 未写定，故不写具体日期。
+             无公开 Steam 商店页，不放商店链接。不写 2.5D / 3D。 -->
+        <p class="i-zh">《隐脉勘舆》是一款以真实测绘为核心的开放世界游戏。你将扮演测绘员林澈，在山谷被水库淹没之前，完成这里的控制测量。踏勘、测量、绘图——没有一键扫图，每一张地图都由你亲手测出，并带你走向这片土地的更深处。</p>
+        <p class="i-en"><em>Hidden Veins</em> is a realistic surveying open-world game. You play as Lin Che, a surveyor sent to complete a control survey in a valley before a reservoir floods it. Scout, measure, draw — there is no one-click map reveal. Every map is one you surveyed yourself, and each one leads you deeper into the land.</p>
         <p class="i-zh">游戏取材于开发者本人的测绘工作经历：野外的蚊虫、泥泞与天气，出毛病的仪器，以及天黑前收工、在灯下把一天的数据绘成地图的那份踏实。</p>
         <p class="i-en">It draws on the developer's own experience as a field surveyor: mosquitoes, mud and weather, instruments that act up, and the quiet satisfaction of packing up before dark and turning a day's data into a map by lamplight.</p>
-        <!-- TODO: 世界观 / 主角 / 时代感一句话 —— 待用户拍板后补充（概念文档 v2 冲突 #6、#8） -->
-        <p class="todo-chip">TODO · <span class="i-zh">世界观与主角介绍待定稿后补充</span><span class="i-en">World &amp; protagonist blurb pending</span></p>
       </div>
     </div>
   </section>
@@ -128,7 +132,7 @@
   <section class="section" id="devlog">
     <div class="wrap">
       <h2 class="sec-title"><span class="i-zh">开发日志</span><span class="i-en">Devlog</span><small>03 · FIELD NOTES</small></h2>
-      <!-- 开发日志：文章在 devlog/ 下，手写静态 HTML，中英对照（蓝帖风格）。草稿，未发布 -->
+      <!-- 开发日志：文章在 devlog/ 下，手写静态 HTML，中英对照（蓝帖风格） -->
       <div class="log-list">
         <article class="log">
           <div class="log-meta">No.001 · <time datetime="2026-11-21">2026-11-21</time></div>

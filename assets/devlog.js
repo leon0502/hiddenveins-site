@@ -12,6 +12,6 @@
   var saved = null;
   try { saved = localStorage.getItem('hv-devlog-view'); } catch (e) {}
   var q = new URLSearchParams(location.search).get('view');
-  setView(q || saved || 'both');
+  setView(q || saved || 'en');
   btns.forEach(function (b) { b.addEventListener('click', function () { setView(b.getAttribute('data-view')); }); });
 })();
